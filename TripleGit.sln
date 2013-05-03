@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NiallsCPP11UtilitiesTests",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NiallsCPP11UtilitiesSIMDTests", "NiallsCPP11Utilities\NiallsCPP11UtilitiesSIMDTests.vcxproj", "{87B7C149-73E3-49C3-8D78-E120367AE900}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GSoCTest", "GSoCTest\GSoCTest.vcxproj", "{BFAEC996-D348-402A-B51A-785C67EAC2A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -96,6 +98,19 @@ Global
 		{87B7C149-73E3-49C3-8D78-E120367AE900}.Release|Win32.ActiveCfg = Release|Win32
 		{87B7C149-73E3-49C3-8D78-E120367AE900}.Release|Win32.Build.0 = Release|Win32
 		{87B7C149-73E3-49C3-8D78-E120367AE900}.Release|x64.ActiveCfg = Release|Win32
+		{BFAEC996-D348-402A-B51A-785C67EAC2A5}.Debug|ARM.ActiveCfg = Debug|Win32
+		{BFAEC996-D348-402A-B51A-785C67EAC2A5}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{BFAEC996-D348-402A-B51A-785C67EAC2A5}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{BFAEC996-D348-402A-B51A-785C67EAC2A5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BFAEC996-D348-402A-B51A-785C67EAC2A5}.Debug|Win32.Build.0 = Debug|Win32
+		{BFAEC996-D348-402A-B51A-785C67EAC2A5}.Debug|x64.ActiveCfg = Debug|x64
+		{BFAEC996-D348-402A-B51A-785C67EAC2A5}.Debug|x64.Build.0 = Debug|x64
+		{BFAEC996-D348-402A-B51A-785C67EAC2A5}.Release|ARM.ActiveCfg = Release|Win32
+		{BFAEC996-D348-402A-B51A-785C67EAC2A5}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{BFAEC996-D348-402A-B51A-785C67EAC2A5}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{BFAEC996-D348-402A-B51A-785C67EAC2A5}.Release|Win32.ActiveCfg = Release|Win32
+		{BFAEC996-D348-402A-B51A-785C67EAC2A5}.Release|Win32.Build.0 = Release|Win32
+		{BFAEC996-D348-402A-B51A-785C67EAC2A5}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
