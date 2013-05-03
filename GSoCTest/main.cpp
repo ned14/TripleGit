@@ -5,3 +5,8 @@
 #include <iostream>
 
 #include "boost/detail/lightweight_test.hpp"
+
+int main(int argc, const char *argv[])
+{
+    return 0;
+}
