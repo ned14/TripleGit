@@ -14,6 +14,12 @@
 	As Niall has pointed out to me, I'm likely trying to access a stack local that is out of scope, but so far	I cannot identify it.	*/
 //#define WILL_COMPLETE
 
+	static std::vector<std::filesystem::path> doEnum(std::filesystem::path p) {
+		std::vector<std::filesystem::path> vec;
+		for( auto it = std::filesystem::directory_iterator(p); it != std::filesystem::directory_iterator(); ++it)
+			vec.push_back((*it).path().filename());
+		return vec;
+	};
 
 // the definition of enumerate() is in async_file_io.hpp, so either update your copy, or use mine
 /** 
@@ -26,12 +32,6 @@ std::pair<std::vector<triplegit::async_io::future<std::vector<std::filesystem::p
 	enumerate(const std::vector<async_io_op> &ops, const std::vector<std::filesystem::path> &paths)
 {
 	assert(ops.size() == paths.size());
-	auto doEnum = []( std::filesystem::path p){
-		std::vector<std::filesystem::path> vec;
-		for( auto it = std::filesystem::directory_iterator(p); it != std::filesystem::directory_iterator(); ++it)
-			vec.push_back((*it).path().filename());
-		return vec;
-	};
 	std::vector<std::function<std::vector<std::filesystem::path>()> > callbacks;
 	callbacks.reserve(ops.size());
 	for(const auto &item : paths)
@@ -40,7 +40,7 @@ std::pair<std::vector<triplegit::async_io::future<std::vector<std::filesystem::p
 	//for(auto i = 0; i < paths.size(); ++i)
 		//callbacks.push_back(std::bind(doEnum, paths[i]));		
 
-	return call(ops, std::move(callbacks));
+	return call(ops, callbacks);
 }
 
 /**
