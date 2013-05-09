@@ -864,6 +864,9 @@ public:
 	inline std::vector<async_io_op> truncate(const std::vector<async_io_op> &ops, const std::vector<off_t> &sizes);
 	//! Convenience function for truncating the length of an item via std::filesystem::resize_file()
 	inline async_io_op truncate(const async_io_op &op, off_t newsize);
+
+	std::pair<std::vector<future<std::vector<std::filesystem::path>>>, std::vector<async_io_op>> enumerate(const std::vector<async_io_op> &ops, const std::vector<std::filesystem::path> &paths);
+
 protected:
 	void complete_async_op(size_t id, std::shared_ptr<detail::async_io_handle> h, exception_ptr e=exception_ptr());
 	completion_returntype invoke_user_completion(size_t id, std::shared_ptr<detail::async_io_handle> h, std::function<completion_t> callback);
